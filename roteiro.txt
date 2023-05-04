@@ -1,0 +1,13 @@
+
+no terminal:
+   npx create-react-app minicadastro
+   npm start  -> no projeto da pasta
+
+
+
+
+
+
+
+
+
