@@ -4,6 +4,7 @@
 
 const Inicio = () => {
 
+
    return (
       <div>
          <div>
@@ -16,8 +17,8 @@ const Inicio = () => {
          <input placeholder="nome" /><br />
          <input placeholder="senha" />
          <div>
-            Novo?
-            <div>Cadastrar</div>
+            <span>Novo?</span><br />
+            <button>Cadastrar</button>
          </div>
       </div>
    )

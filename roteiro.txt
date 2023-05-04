@@ -4,9 +4,12 @@ no terminal:
    npm start  -> no projeto da pasta
 
 
+react router
+https://reactrouter.com/en/main/start/tutorial
 
-
-
+no terminal:
+   npm i react-router-dom
+   
 
 
 

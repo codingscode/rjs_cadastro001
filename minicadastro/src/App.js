@@ -1,5 +1,7 @@
 
 import './App.css'
+
+
 import Inicio from './Paginas/Inicio/Inicio'
 
 
@@ -8,7 +10,7 @@ const App = () => {
 
   return (
     <div className='App'>
-       Cadastro
+       <div>Cadastro</div>
        <Inicio />
     </div>
   )
