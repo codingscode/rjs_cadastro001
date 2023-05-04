@@ -2,7 +2,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App'
+//import App from './App'
+import Root from './routes/root'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Cadastrar from './Paginas/Cadastrar/Cadastrar'
 
@@ -10,12 +11,12 @@ import Cadastrar from './Paginas/Cadastrar/Cadastrar'
 const router = createBrowserRouter([
    {
       path: '/',
-      element: <App />,
+      element: <Root />,
    },
-   {
+   /* {
       path: '/cadastrar',
       element: <Cadastrar />,
-   },
+   }, */
 ]);
 
 
