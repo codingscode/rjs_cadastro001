@@ -9,7 +9,16 @@ https://reactrouter.com/en/main/start/tutorial
 
 no terminal:
    npm i react-router-dom
-   
+
+
+
+testar
+http://localhost:3000/qualquercoisa
+
+
+
+
+
 
 
 
