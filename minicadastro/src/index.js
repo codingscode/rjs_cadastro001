@@ -7,7 +7,7 @@ import Root from './routes/root'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Cadastrar from './Paginas/Cadastrar/Cadastrar'
 import ElementoErro from './erro-pagina'
-
+import Produtos from './Produtos/Produtos'
 
 
 const router = createBrowserRouter([
@@ -24,7 +24,10 @@ const router = createBrowserRouter([
        ],
    
    },
-   
+   {
+      path: '/comprar',
+      element: <Produtos />
+   }
    
    
    
