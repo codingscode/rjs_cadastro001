@@ -1,0 +1,17 @@
+
+.cabecalho > :nth-child(1) {      /*  .cabecalho > div:nth-child(1) { */
+   background-color: lightgreen;
+   color: red;
+   padding-top: 15px;
+   padding-left: 400px;
+   padding-bottom: 15px;
+}
+
+/* .cabecalho {
+    background-color: 'green';
+}
+ */
+
+
+
+

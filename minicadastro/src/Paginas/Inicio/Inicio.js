@@ -1,12 +1,12 @@
-
-
+import React from 'react'
+import './Inicio.css'
 
 
 const Inicio = () => {
 
 
    return (
-      <div>
+      <div className='base'>
          <div>
             <select  >
                <option>selecione</option>
@@ -18,7 +18,7 @@ const Inicio = () => {
          <input placeholder="senha" />
          <div>
             <span>Novo?</span><br />
-            <button>Cadastrar</button>
+            <button className='cadastrar' >Cadastrar</button>
          </div>
       </div>
    )
@@ -26,8 +26,3 @@ const Inicio = () => {
 }
 
 export default Inicio
-
-
-
-
-

@@ -1,0 +1,27 @@
+
+.base {
+   background-color: aqua;
+   /* color: 'black'; */
+}
+
+.base {
+    padding-top: 10px;
+    
+}
+
+.base > * {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+.cadastrar {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
