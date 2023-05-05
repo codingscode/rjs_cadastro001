@@ -9,16 +9,25 @@ import Cadastrar from './Paginas/Cadastrar/Cadastrar'
 import ElementoErro from './erro-pagina'
 
 
+
 const router = createBrowserRouter([
    {
       path: '/',
       element: <Root />,
-      errorElement: <ElementoErro />
+      errorElement: <ElementoErro />,
+      children: [
+         {
+           path: 'cadastrar',
+           element: <Cadastrar />,
+         },
+
+       ],
+   
    },
-   /* {
-      path: '/cadastrar',
-      element: <Cadastrar />,
-   }, */
+   
+   
+   
+   
 ]);
 
 

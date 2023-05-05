@@ -2,7 +2,7 @@ import React from 'react'
 import './Inicio.css'
 
 
-const Inicio = () => {
+const Inicio = ({}) => {
 
 
    return (
@@ -15,7 +15,8 @@ const Inicio = () => {
             </select>
          </div>
          <input placeholder="nome" /><br />
-         <input placeholder="senha" />
+         <input placeholder="senha" /><br />
+         <button>Entrar</button>
          <div>
             <span>Novo?</span><br />
             <button className='cadastrar' >Cadastrar</button>
