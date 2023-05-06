@@ -53,7 +53,7 @@ const Produtos = ({}) => {
                   <img className='imagem' src={cada.imagem} />
                   <div>{cada.nome}</div>
                   <div>Preço: R$ {cada.preco}</div>
-                  <Utils funcao={(e) => setQuant(e)} />
+                  <Utils funcao={(e) => setQuant(e+1)} />
                   <button onClick={() => noCarrinho(cada.id, cada.nome, cada.preco, quant)} >comprar</button>
                   
                </div>

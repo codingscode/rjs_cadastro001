@@ -15,12 +15,10 @@ const Utils = ({funcao}) => {
        if (sinal === '-') {
           setQuantidade(q-1)
        }
-       console.log(q)
+       console.log('q', q+1)
+       console.log('quantidade', quantidade+1)
        funcao(q)
        
-       /* valor = q
-       console.log(`valor: ${valor}`) */
-
     }
 
     
@@ -31,8 +29,6 @@ const Utils = ({funcao}) => {
           <div>Quantidade: {quantidade}</div>
           <button onClick={() => alterar("+", quantidade)}>+</button>
           <button onClick={() => alterar("-", quantidade)} >-</button>
-          {/* <button onClick={() => alterar("+")}>+</button>
-          <button onClick={() => alterar("-")} >-</button> */}
           
         </div>
     )

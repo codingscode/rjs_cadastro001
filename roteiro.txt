@@ -48,7 +48,7 @@ https://github.com/typicode/json-server/issues/519
 
 valor de quantidade independente de produto
 
-
+deu certo agora
 
 
 
