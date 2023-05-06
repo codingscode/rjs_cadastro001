@@ -10,14 +10,16 @@ import Utils from './utils'
 const Produtos = ({}) => {
       
    const [dados, setDados] = useState([])
-   const [compraDados, setCompraDados] = useState({
-      compras: [
-         {"id": 1, "nome": "TV", "preco": 1200, "quantidade": 3, "total": 3600, "met_pagamento": "cartão"}
-      ],
-      soma_total: 0
-   })
-   
+   const [quant, setQuant] = useState(0)
 
+   const [compraDados, setCompraDados] = useState(
+      [
+         {id: 1, nome: 'TV', preco: 1200, quantidade: 3, total: 3600, met_pagamento: 'cartão'}
+      ]
+   )
+
+   
+   
 
    useEffect(() => {
       fetch(`http://192.168.1.13:3000/produtos`)
@@ -31,10 +33,14 @@ const Produtos = ({}) => {
         })
     }, [])
 
-   const noCarrinho = (n, p) => {
+   const noCarrinho = (id, n, p, q) => {
+      setCompraDados([...compraDados, {id: id, nome: n, preco: p, quantidade: q, total: p*q, met_pagamento: 'cartão'}])
       console.log(n, p)
-      let total = n*p
-      setCompraDados(...compraDados, compraDados.compras.push({}))
+      console.log(compraDados)
+   }
+
+   const chamada = (v) => {
+      return v
    }
 
  
@@ -47,13 +53,14 @@ const Produtos = ({}) => {
                   <img className='imagem' src={cada.imagem} />
                   <div>{cada.nome}</div>
                   <div>Preço: R$ {cada.preco}</div>
-                  <Utils />
-                  <button onClick={() => noCarrinho(cada.nome, cada.preco)} >comprar</button>
+                  <Utils funcao={(e) => setQuant(e)} />
+                  <button onClick={() => noCarrinho(cada.id, cada.nome, cada.preco, quant)} >comprar</button>
                   
                </div>
             )
          })}
          <button>Finalizar</button>
+         {'1' | chamada()}
       </div>
    )
 }
