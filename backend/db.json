@@ -36,10 +36,10 @@
      ], "soma_total": 3600}
   ],
   "produtos": [
-     {"id": 1, "nome": "TV", "preco": 1200, "imagem": ""},
-     {"id": 2, "nome": "Alicate", "preco": 50, "imagem": ""},
-     {"id": 3, "nome": "Computador", "preco": 3000, "imagem": ""},
-     {"id": 4, "nome": "Bicicleta", "preco": 600, "imagem": ""},
-     {"id": 5, "nome": "Skate", "preco": 150, "imagem": ""}
+     {"id": 1, "nome": "TV", "preco": 1200, "imagem": "./images/tv.jpg"},
+     {"id": 2, "nome": "Alicate", "preco": 50, "imagem": "./images/alicate.jpg"},
+     {"id": 3, "nome": "Computador", "preco": 3000, "imagem": "./images/pc.jpg"},
+     {"id": 4, "nome": "Bicicleta", "preco": 600, "imagem": "./images/bike.jpeg"},
+     {"id": 5, "nome": "Skate", "preco": 150, "imagem": "./images/skate.jpg"}
   ]
 }

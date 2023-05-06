@@ -46,7 +46,7 @@ https://github.com/typicode/json-server/issues/519
 
 "start": "json-server --watch --host 192.168.1.13 db.json"
 
-
+valor de quantidade independente de produto
 
 
 
