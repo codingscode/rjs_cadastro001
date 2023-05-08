@@ -31,9 +31,8 @@
   ],
   "u_administrador": { "nome": "admin", "senha": "admin" },
   "usuarios_comuns": [
-     {"id": 1, "nome": "kyle", "sobrenome": "silva", "senha": "abc", "email": "kyle@gmail.com", "compras": [
-        {"id": 1, "nome": "TV", "preco": 1200, "quantidade": 3, "total": 3600, "met_pagamento": "cartão"}
-     ], "soma_total": 3600}
+     {"id": 1, "nome": "kyle", "sobrenome": "silva", "senha": "abc", "email": "kyle@gmail.com", 
+         "compras": [], "soma_total": 3600}
   ],
   "produtos": [
      {"id": 1, "nome": "TV", "preco": 1200, "imagem": "./images/tv.jpg"},
