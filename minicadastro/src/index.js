@@ -8,6 +8,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Cadastrar from './Paginas/Cadastrar/Cadastrar'
 import ElementoErro from './erro-pagina'
 import Produtos from './Produtos/Produtos'
+import UsuarioAdministrador from './Paginas/UsuAdministrador/UsuarioAdministrador'
+import UsuarioComum from './Paginas/UsuComum/UsuarioComum'
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
          {
            path: 'cadastrar',
            element: <Cadastrar />,
+         },
+         {
+           path: '/administrador',
+           element: <UsuarioAdministrador />,
+         },
+         {
+           path: '/ucomum',
+           element: <UsuarioComum />,
          },
 
        ],

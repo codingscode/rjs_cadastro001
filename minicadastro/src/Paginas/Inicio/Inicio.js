@@ -10,27 +10,43 @@ const Inicio = ({}) => {
 
    const navegar = useNavigate()
 
+   const entrar = (e) => {
+      e.preventDefault()
+
+      const nome = e.target.elements.nome.value
+      const senha = e.target.elements.senha.value
+      const tipousario = e.target.elements.tusuario.value
+      console.log(nome, senha, tipousario)
+      if (tipousario == 'Usuário Administrador') {
+         navegar('/administrador', { replace: true })
+      }
+      if (tipousario == 'Usuário Comum') {
+         navegar('/ucomum', { replace: true })
+
+      }
+   }
+
    const paginaCadastrar = () => {
       navegar('/cadastrar', { replace: true })
    }
 
    return (
-      <div className='base'>
+      <form className='base' onSubmit={entrar} >
          <div>
-            <select  >
+            <select id='tusuario' name='tusuario' >
                <option>selecione</option>
                <option>Usuário Comum</option>
                <option>Usuário Administrador</option>
             </select>
          </div>
-         <input placeholder="nome" /><br />
-         <input placeholder="senha" /><br />
-         <button>Entrar</button>
+         <input id='nome' name='nome' placeholder="nome" /><br />
+         <input id='senha' name='senha' placeholder="senha" /><br />
+         <button type='submit' >Entrar</button>
          <div>
             <span>Novo?</span><br />
             <button className='cadastrar' onClick={paginaCadastrar} >Cadastrar</button>
          </div>
-      </div>
+      </form>
    )
 
 }

@@ -7,7 +7,7 @@ const UsuarioComum = () => {
 
     return (
        <div>
-          Usuario Comum
+          Usuário Comum
        </div>
     )
  
