@@ -50,7 +50,10 @@ valor de quantidade independente de produto
 
 deu certo agora
 
+https://www.robinwieruch.de/react-form/
 
+em http://localhost:3001/cadastrar
+   cadastrar dados e ver alerta
 
 
 
