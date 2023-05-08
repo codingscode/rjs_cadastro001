@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { CadastrarPessoa } from '../../Produtos/utils'
 
 
 //{"id": 1, "nome": "kyle", "sobrenome": "silva", "senha": "abc", "email": "kyle@gmail.com", "compras": [], "soma_total": 3600}
@@ -17,13 +17,14 @@ const Cadastrar = () => {
    const handleSubmit = (e) => {
       e.preventDefault()
 
-      const nome = e.target.elements.nome.value;
-      const sobrenome = e.target.elements.sobrenome.value;
-      const email = e.target.elements.email.value;
-      const senha = e.target.elements.senha.value;
-      const pagamento = e.target.elements.pagamento.value;
-
+      const nome = e.target.elements.nome.value
+      const sobrenome = e.target.elements.sobrenome.value
+      const email = e.target.elements.email.value
+      const senha = e.target.elements.senha.value
+      const pagamento = e.target.elements.pagamento.value
+      const dados = { nome, sobrenome, email, senha, pagamento }
       alert(`nome: ${nome}\nsobrenome: ${sobrenome}\nemail: ${email}\nsenha: ${senha}\npagamento: ${pagamento}`)
+      CadastrarPessoa(dados)
    }
 
 //onChange={(e) => imprimirAtual(e.target.value, e.target.name)}

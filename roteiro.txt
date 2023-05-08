@@ -56,6 +56,20 @@ em http://localhost:3001/cadastrar
    cadastrar dados e ver alerta
 
 
+https://upmostly.com/tutorials/how-to-post-requests-react
+https://www.youtube.com/watch?v=EcRFYF4B3IQ
+
+realizando post
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -32,8 +32,8 @@ export const Utils = ({funcao}) => {
 
 }
 
-export const ChamadaProdutos = (f) => {
-   useEffect(() => {
+export const ChamadaProdutos = async (f) => {
+   await useEffect(() => {
       fetch(`http://192.168.1.13:3000/produtos`)
         .then(response => response.json())
         .then((data) => {
@@ -47,8 +47,8 @@ export const ChamadaProdutos = (f) => {
 
 }
 
-export const ChamadaPessoas = (f) => {
-   useEffect(() => {
+export const ChamadaPessoas = async (f) => {
+   await useEffect(() => {
       fetch(`http://192.168.1.13:3000/usuarios_comuns`)
         .then(response => response.json())
         .then((data) => {
@@ -62,6 +62,37 @@ export const ChamadaPessoas = (f) => {
 
 }
 
+export const CadastrarPessoa = async (jsonData) => {
+
+   // Send data to the backend via POST
+   await fetch('http://192.168.1.13:3000/usuarios_comuns', {  // Enter your IP address here
+      method: 'POST', 
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
+
+    }).then(() => {
+      console.log('enviado')
+    })
+
+}
+
+/* export const CadastrarPessoa = async (f) => {
+
+   await useEffect(() => {
+      // POST request using fetch inside useEffect React hook
+      const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title: 'React Hooks POST Request Example' })
+      }
+      fetch('http://192.168.1.13:3000/usuarios_comuns', requestOptions)
+          .then(response => response.json())
+          .then(data => f(data.id))//.then(data => setPostId(data.id))
+  
+  // empty dependency array means this effect will only run once (like componentDidMount in classes)
+   }, [])
+
+} */
 
 
 //export default chamadaProdutos
