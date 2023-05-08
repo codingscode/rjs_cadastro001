@@ -1,9 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Inicio.css'
+
+
+
 
 
 const Inicio = ({}) => {
 
+   const navegar = useNavigate()
+
+   const paginaCadastrar = () => {
+      navegar('/cadastrar', { replace: true })
+   }
 
    return (
       <div className='base'>
@@ -19,7 +28,7 @@ const Inicio = ({}) => {
          <button>Entrar</button>
          <div>
             <span>Novo?</span><br />
-            <button className='cadastrar' >Cadastrar</button>
+            <button className='cadastrar' onClick={paginaCadastrar} >Cadastrar</button>
          </div>
       </div>
    )

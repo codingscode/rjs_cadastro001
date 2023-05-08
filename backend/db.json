@@ -50,6 +50,22 @@
       "senha": "abc123",
       "pagamento": "cartão",
       "id": 2
+    },
+    {
+      "nome": "fabiola",
+      "sobrenome": "lima",
+      "email": "fabi@gmail.com",
+      "senha": "HJKL",
+      "pagamento": "boleto",
+      "id": 3
+    },
+    {
+      "nome": "vicente",
+      "sobrenome": "loredo",
+      "email": "vi@gmail.com",
+      "senha": "qweqwfd4234",
+      "pagamento": "cartão",
+      "id": 4
     }
   ],
   "produtos": [

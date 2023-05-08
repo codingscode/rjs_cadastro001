@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CadastrarPessoa } from '../../Produtos/utils'
 
 
@@ -8,6 +9,8 @@ const Cadastrar = () => {
    const [usuarioAtual, setUsuarioAtual] = useState({
       nome: '', sobrenome: '', senha: '', email: ''
    })
+
+   const navigate = useNavigate()
 
    const imprimirAtual = (v, nome) => {
       setUsuarioAtual({...usuarioAtual, [nome]: v})
@@ -25,6 +28,7 @@ const Cadastrar = () => {
       const dados = { nome, sobrenome, email, senha, pagamento }
       alert(`nome: ${nome}\nsobrenome: ${sobrenome}\nemail: ${email}\nsenha: ${senha}\npagamento: ${pagamento}`)
       CadastrarPessoa(dados)
+      navigate('/', { replace: true })
    }
 
 //onChange={(e) => imprimirAtual(e.target.value, e.target.name)}
