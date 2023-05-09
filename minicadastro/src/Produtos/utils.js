@@ -76,3 +76,15 @@ export const CadastrarPessoa = async (jsonData) => {
 
 }
 
+export const ApagarPessoa = async (lista) => {
+   
+   let vetor = lista.filter(cada => cada.nome !== 'vicente')
+
+   console.log('vetor', vetor)
+   
+    
+
+}
+
+
+

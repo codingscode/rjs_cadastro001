@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { ChamadaPessoas } from '../../Produtos/utils'
+import { ChamadaPessoas, ApagarPessoa } from '../../Produtos/utils'
 import './UsuarioAdministrador.css'
 
 
@@ -7,6 +7,8 @@ const UsuarioAdministrador = () => {
    const [usuarios, setUsuarios] = useState([])
    
    ChamadaPessoas(setUsuarios)
+
+   ApagarPessoa(usuarios)
 
    return (
       <div>

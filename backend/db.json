@@ -67,6 +67,22 @@
       "senha": "qweqwfd4234",
       "pagamento": "cartão",
       "id": 4
+    },
+    {
+      "nome": "felipe",
+      "sobrenome": "sousa",
+      "email": "felipe@gmail.com",
+      "senha": "iuop12",
+      "pagamento": "cartão",
+      "id": 5
+    },
+    {
+      "nome": "gisele",
+      "sobrenome": "teixeira",
+      "email": "gigi@gmail.com",
+      "senha": "tbcki9856",
+      "pagamento": "boleto",
+      "id": 6
     }
   ],
   "produtos": [
