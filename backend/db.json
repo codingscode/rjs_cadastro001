@@ -61,26 +61,18 @@
       "id": 3
     },
     {
-      "nome": "vicente",
-      "sobrenome": "loredo",
-      "email": "vi@gmail.com",
-      "senha": "qweqwfd4234",
+      "nome": "gisele",
+      "sobrenome": "teixeira",
+      "email": "gigi@gmail.com",
+      "senha": "tbcki9856",
       "pagamento": "cartão",
-      "id": 4
+      "id": 5
     },
     {
       "nome": "felipe",
       "sobrenome": "sousa",
       "email": "felipe@gmail.com",
       "senha": "iuop12",
-      "pagamento": "cartão",
-      "id": 5
-    },
-    {
-      "nome": "gisele",
-      "sobrenome": "teixeira",
-      "email": "gigi@gmail.com",
-      "senha": "tbcki9856",
       "pagamento": "boleto",
       "id": 6
     }

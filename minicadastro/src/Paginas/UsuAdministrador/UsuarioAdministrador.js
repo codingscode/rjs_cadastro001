@@ -1,14 +1,20 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { ChamadaPessoas, ApagarPessoa } from '../../Produtos/utils'
 import './UsuarioAdministrador.css'
 
 
 const UsuarioAdministrador = () => {
    const [usuarios, setUsuarios] = useState([])
+
+   const navegar = useNavigate()
    
    ChamadaPessoas(setUsuarios)
-
-   ApagarPessoa(usuarios)
+   
+   const apagar = (lista, quem) => {
+      ApagarPessoa(lista, quem)
+      navegar('/administrador', { replace: true })
+   }
 
    return (
       <div>
@@ -23,14 +29,15 @@ const UsuarioAdministrador = () => {
                     <div>Email: {cada.email}</div>
                     <div>Senha: {cada.senha}</div>
                     <div>Pagamento: {cada.pagamento}</div>
+                    <button onClick={() => apagar(usuarios, cada.nome)} >apagar {cada.nome} </button>
                  </div>
               )
-           })}
+            })}
          </div>
       </div>
    )
  
- }
+}
  
  export default UsuarioAdministrador
  
