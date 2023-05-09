@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import './Produtos.css'
 import { ChamadaProdutos, Utils } from './utils'
 
+
+
 // http://localhost:3001/comprar
-
-
 
 const Produtos = ({}) => {
       
@@ -20,18 +20,7 @@ const Produtos = ({}) => {
 
    
    ChamadaProdutos(setDados)
-
-   /* useEffect(() => {
-      fetch(`http://192.168.1.13:3000/produtos`)
-        .then(response => response.json())
-        .then((data) => {
-           console.log(data)
-           setDados(data)
-        })
-        .catch((e) => {
-           console.error(`Um erro aconteceu: ${e}`)
-        })
-    }, []) */
+   
 
    const noCarrinho = (id, n, p, q) => {
       setCompraDados([...compraDados, {id: id, nome: n, preco: p, quantidade: q, total: p*q, met_pagamento: 'cartão'}])

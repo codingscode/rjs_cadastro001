@@ -76,6 +76,3 @@ export const CadastrarPessoa = async (jsonData) => {
 
 }
 
-
-
-//export default chamadaProdutos

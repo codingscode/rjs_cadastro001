@@ -41,6 +41,7 @@
       "senha": "abc",
       "email": "kyle@gmail.com",
       "compras": [],
+      "pagamento": "cartão",
       "soma_total": 3600
     },
     {

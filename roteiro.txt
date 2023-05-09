@@ -68,7 +68,7 @@ https://codefrontend.com/reactjs-redirect-to-url/#:~:text=Navigating%20to%20an%2
 
 rotas para u administrador e u comum
 
-
+mostrando lista de usuarios comuns na pagina usuario administrador
 
 
 
