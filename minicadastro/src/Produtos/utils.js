@@ -34,23 +34,23 @@ export const Utils = ({funcao}) => {
    }
    
    export const ChamadaProdutos = async (f) => {
-   await useEffect(() => {
-      fetch(`http://192.168.1.13:3000/produtos`)
-      .then(response => response.json())
-        .then((data) => {
-           console.log(data)
-           f(data)  //setDados(data)
-         })
-         .catch((e) => {
-            console.error(`Um erro aconteceu: ${e}`)
-         })
-      }, [])
+      await useEffect(() => {
+         fetch(`http://192.168.1.13:3000/produtos`)
+           .then(response => response.json())
+             .then((data) => {
+                console.log(data)
+                f(data)  //setDados(data)
+              })
+              .catch((e) => {
+                 console.error(`Um erro aconteceu: ${e}`)
+              })
+           }, [])
       
    }
    
    export const ChamadaPessoas = async (f) => {
-      await useEffect(() => {
-      fetch(`http://192.168.1.13:3000/usuarios_comuns`)
+      //await useEffect(() => {
+      await fetch(`http://192.168.1.13:3000/usuarios_comuns`)
       .then(response => response.json())
       .then((data) => {
          console.log(data)
@@ -59,7 +59,7 @@ export const Utils = ({funcao}) => {
       .catch((e) => {
          console.error(`Um erro aconteceu: ${e}`)
       })
-   }, [])
+      //}, [])
    
 }
 

@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import React, { useEffect, useState } from "react"
 import { ChamadaPessoas, ApagarPessoa } from '../../Produtos/utils'
 import './UsuarioAdministrador.css'
 
@@ -7,13 +6,18 @@ import './UsuarioAdministrador.css'
 const UsuarioAdministrador = () => {
    const [usuarios, setUsuarios] = useState([])
 
-   const navegar = useNavigate()
-   
-   ChamadaPessoas(setUsuarios)
+      
+   useEffect(() => {
+      ChamadaPessoas(setUsuarios)
+
+   }, [])
    
    const apagar = (lista, quem) => {
+      let novalista = lista.filter((cada) => cada.nome !== quem)
+      
       ApagarPessoa(lista, quem)
-      navegar('/administrador', { replace: true })
+      
+      setUsuarios([...novalista])
    }
 
    return (

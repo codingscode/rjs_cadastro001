@@ -72,7 +72,7 @@ mostrando lista de usuarios comuns na pagina usuario administrador
 
 apagando usuário , mas nao atualiza a pagina
 
-
+agora deu certo
 
 
 

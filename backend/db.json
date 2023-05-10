@@ -75,6 +75,30 @@
       "senha": "iuop12",
       "pagamento": "boleto",
       "id": 6
+    },
+    {
+      "nome": "Otávio",
+      "sobrenome": "Serra",
+      "email": "otavios@gmail.com",
+      "senha": "teuyvb52478",
+      "pagamento": "boleto",
+      "id": 7
+    },
+    {
+      "nome": "Larissa",
+      "sobrenome": "Gonçales",
+      "email": "lala@yahoo.com",
+      "senha": "oporewrb322364gg",
+      "pagamento": "cartão",
+      "id": 8
+    },
+    {
+      "nome": "Richard",
+      "sobrenome": "Davidsson",
+      "email": "richard@outlook.com",
+      "senha": "iojrbvyhv3567gyusd",
+      "pagamento": "boleto",
+      "id": 9
     }
   ],
   "produtos": [
