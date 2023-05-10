@@ -25,7 +25,7 @@ const UsuarioAdministrador = () => {
          <div className="uacabecalho" >Usuario Administrador</div>
          <div>
            <div className="uctitulo" >Lista de Usuários Comuns</div>
-           {(usuarios).map((cada, i) => {
+           {usuarios.length ? usuarios.map((cada, i) => {
               return (
                  <div key={i} className='container' >
                     <div>Nome: {cada.nome}</div>
@@ -36,7 +36,7 @@ const UsuarioAdministrador = () => {
                     <button onClick={() => apagar(usuarios, cada.nome)} >apagar {cada.nome} </button>
                  </div>
               )
-            })}
+            }) : 'Não há usuários cadastrados.'}
          </div>
       </div>
    )

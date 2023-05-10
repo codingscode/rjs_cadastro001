@@ -53,12 +53,20 @@
       "id": 2
     },
     {
+      "nome": "vicente",
+      "sobrenome": "oliveira",
+      "email": "vi@outlook.com",
+      "senha": "yuvzwf453qsd",
+      "pagamento": "boleto",
+      "id": 3
+    },
+    {
       "nome": "fabiola",
       "sobrenome": "lima",
       "email": "fabi@gmail.com",
       "senha": "HJKL",
       "pagamento": "boleto",
-      "id": 3
+      "id": 4
     },
     {
       "nome": "gisele",
@@ -91,14 +99,6 @@
       "senha": "oporewrb322364gg",
       "pagamento": "cartão",
       "id": 8
-    },
-    {
-      "nome": "Richard",
-      "sobrenome": "Davidsson",
-      "email": "richard@outlook.com",
-      "senha": "iojrbvyhv3567gyusd",
-      "pagamento": "boleto",
-      "id": 9
     }
   ],
   "produtos": [
