@@ -14,7 +14,7 @@ const Inicio = ({}) => {
       ChamadaPessoas(setUcomuns)
    }, [])
 
-   console.log('*ucomuns', ucomuns)
+   //console.log('*ucomuns', ucomuns)
 
    const navegar = useNavigate()
 
@@ -25,6 +25,7 @@ const Inicio = ({}) => {
       const senha = e.target.elements.senha.value
       const tipousario = e.target.elements.tusuario.value
       console.log(nome, senha, tipousario)
+
       if (tipousario == 'Usuário Administrador') {
          navegar('/administrador', { replace: true })
       }
@@ -33,7 +34,8 @@ const Inicio = ({}) => {
          console.log('existe?', presente)
 
          if(presente.length) {
-            navegar('/ucomum', { replace: true })
+            navegar('/ucomum', { state: presente[0], replace: true })
+            console.log('presente', presente)
          }
          else {
             alert('usuario inexistente') 
