@@ -48,7 +48,7 @@ export const Utils = ({funcao}) => {
       
    }
    
-   export const ChamadaPessoas = async (f) => {
+export const ChamadaPessoas = async (f) => {
       //await useEffect(() => {
       await fetch(`http://192.168.1.13:3000/usuarios_comuns`)
       .then(response => response.json())

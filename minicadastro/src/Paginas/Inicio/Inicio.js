@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { ChamadaPessoas } from '../../Produtos/utils'
 import './Inicio.css'
 
 
@@ -7,6 +8,13 @@ import './Inicio.css'
 
 
 const Inicio = ({}) => {
+   const [ucomuns, setUcomuns] = useState([])
+
+   useEffect(() => {
+      ChamadaPessoas(setUcomuns)
+   }, [])
+
+   console.log('*ucomuns', ucomuns)
 
    const navegar = useNavigate()
 
@@ -21,7 +29,16 @@ const Inicio = ({}) => {
          navegar('/administrador', { replace: true })
       }
       if (tipousario == 'Usuário Comum') {
-         navegar('/ucomum', { replace: true })
+         let presente = ucomuns.filter((cada) => (nome == cada.nome) & (senha == cada.senha))
+         console.log('existe?', presente)
+
+         if(presente.length) {
+            navegar('/ucomum', { replace: true })
+         }
+         else {
+            alert('usuario inexistente') 
+
+         }
 
       }
    }

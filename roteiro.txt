@@ -74,6 +74,8 @@ apagando usuário , mas nao atualiza a pagina
 
 agora deu certo
 
+validação de entrada em usuario comum
+
 
 
 
