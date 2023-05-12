@@ -5,9 +5,7 @@ import { useLocation } from 'react-router-dom'
 const UsuarioComum = () => {
    const [uatual, setUatual] = useState({})
    const { state } = useLocation()
-   
-   console.log(state)
-   
+  
    useEffect(() => {
       setUatual({...state})
    }, [])
@@ -30,19 +28,5 @@ const UsuarioComum = () => {
  
  }
  
- export default UsuarioComum
- 
-/* 
- {
-      "id": 1,
-      "nome": "kyle",
-      "sobrenome": "silva",
-      "senha": "abc",
-      "email": "kyle@gmail.com",
-      "compras": [],
-      "pagamento": "cartão",
-      "soma_total": 3600
- }
- 
- */
+export default UsuarioComum
  

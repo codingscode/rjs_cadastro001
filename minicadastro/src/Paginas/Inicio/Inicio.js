@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ChamadaPessoas } from '../../Produtos/utils'
+import { ChamadaPessoas, EAdministrador } from '../../Produtos/utils'
 import './Inicio.css'
 
 
@@ -9,25 +9,46 @@ import './Inicio.css'
 
 const Inicio = ({}) => {
    const [ucomuns, setUcomuns] = useState([])
+   const [eadmin, setEadmin] = useState(false)
 
    useEffect(() => {
       ChamadaPessoas(setUcomuns)
+      Verificar()
    }, [])
 
-   //console.log('*ucomuns', ucomuns)
-
+   
    const navegar = useNavigate()
 
-   const entrar = (e) => {
+   const Verificar = (valor = false) => {
+      
+      setEadmin(valor)
+      
+      
+   }
+
+   const Entrar = (e) => {
       e.preventDefault()
 
+      //let administrador = false
       const nome = e.target.elements.nome.value
       const senha = e.target.elements.senha.value
       const tipousario = e.target.elements.tusuario.value
-      console.log(nome, senha, tipousario)
-
+      
+      
+      //EAdministrador(nome, senha)
+      EAdministrador(nome, senha, setEadmin)
+      console.log('EAdministrador', EAdministrador(nome, senha, Verificar))
+      console.log('valor eadmin', eadmin)
+      
       if (tipousario == 'Usuário Administrador') {
-         navegar('/administrador', { replace: true })
+
+         if(eadmin) {
+            console.log('é administrador?', eadmin)
+            navegar('/administrador', { replace: true })
+         }
+         else {
+            alert('você não é administrador')
+         }
       }
       if (tipousario == 'Usuário Comum') {
          let presente = ucomuns.filter((cada) => (nome == cada.nome) & (senha == cada.senha))
@@ -50,7 +71,7 @@ const Inicio = ({}) => {
    }
 
    return (
-      <form className='base' onSubmit={entrar} >
+      <form className='base' onSubmit={Entrar} >
          <div>
             <select id='tusuario' name='tusuario' >
                <option>selecione</option>

@@ -31,22 +31,22 @@ export const Utils = ({funcao}) => {
         </div>
     )
     
-   }
+}
    
-   export const ChamadaProdutos = async (f) => {
+export const ChamadaProdutos = async (f) => {
       await useEffect(() => {
          fetch(`http://192.168.1.13:3000/produtos`)
            .then(response => response.json())
-             .then((data) => {
-                console.log(data)
-                f(data)  //setDados(data)
-              })
-              .catch((e) => {
-                 console.error(`Um erro aconteceu: ${e}`)
-              })
-           }, [])
+           .then((data) => {
+              console.log(data)
+              f(data)  //setDados(data)
+           })
+           .catch((e) => {
+               console.error(`Um erro aconteceu: ${e}`)
+           })
+         }, [])
       
-   }
+}
    
 export const ChamadaPessoas = async (f) => {
       //await useEffect(() => {
@@ -93,9 +93,33 @@ export const ApagarPessoa = async (lista, nome) => {
       console.log('apagado')
    })
    
-   
-   
 }
 
+export const EAdministrador = (nome, senha, mod) => {
+      
+   
+   let retorno = fetch(`http://192.168.1.13:3000/u_administrador`)
+      .then(res => res.json())
+      .then((data) => {
+         console.log('admin ', data)
+         if ((data.nome == nome) && (data.senha = senha)) {
+            console.log('bate')
+            mod(true)
+            return true
+         }
+         else {
+            return false
+            
+         }
+      })
+      /* .catch((erro) => {
+         console.log(`erro: ${erro}`)
+      }) */
+ 
+   const armazenar = retorno
 
+   console.log('armazenar', armazenar)
+   return armazenar
+   
+}
 
