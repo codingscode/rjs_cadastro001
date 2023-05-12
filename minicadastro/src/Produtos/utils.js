@@ -95,31 +95,49 @@ export const ApagarPessoa = async (lista, nome) => {
    
 }
 
-export const EAdministrador = (nome, senha, mod) => {
-      
+export const EAdministrador = async (nome, senha, estado) => {
    
-   let retorno = fetch(`http://192.168.1.13:3000/u_administrador`)
+   let ret = fetch(`http://192.168.1.13:3000/u_administrador`)
       .then(res => res.json())
       .then((data) => {
          console.log('admin ', data)
-         if ((data.nome == nome) && (data.senha = senha)) {
+         return data
+      })
+      .then((res) => {
+         if ((res.nome == nome) && (res.senha = senha)) {
             console.log('bate')
-            mod(true)
+            estado(true)
             return true
          }
          else {
+            console.log('nao bate')
+            estado(false)
             return false
-            
+         }
+      })
+   
+   return ret
+   
+   
+   /* let retorno = fetch(`http://192.168.1.13:3000/u_administrador`)
+      .then(res => res.json())
+      .then((data) => {
+         console.log('admin ', data)
+         
+         if ((data.nome == nome) && (data.senha = senha)) {
+            console.log('bate')
+            estado(true)
+         }
+         else {
+            console.log('nao bate')
+            estado(false)
          }
       })
       /* .catch((erro) => {
          console.log(`erro: ${erro}`)
-      }) */
- 
-   const armazenar = retorno
-
-   console.log('armazenar', armazenar)
-   return armazenar
+      }) 
    
+   return estado */
+      
 }
 

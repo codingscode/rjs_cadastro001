@@ -13,31 +13,26 @@ const Inicio = ({}) => {
 
    useEffect(() => {
       ChamadaPessoas(setUcomuns)
-      Verificar()
+      //Verificar()
    }, [])
 
    
    const navegar = useNavigate()
 
    const Verificar = (valor = false) => {
-      
       setEadmin(valor)
-      
-      
    }
 
    const Entrar = (e) => {
       e.preventDefault()
 
-      //let administrador = false
       const nome = e.target.elements.nome.value
       const senha = e.target.elements.senha.value
       const tipousario = e.target.elements.tusuario.value
       
       
-      //EAdministrador(nome, senha)
       EAdministrador(nome, senha, setEadmin)
-      console.log('EAdministrador', EAdministrador(nome, senha, Verificar))
+      console.log('EAdministrador', EAdministrador(nome, senha, setEadmin))
       console.log('valor eadmin', eadmin)
       
       if (tipousario == 'Usuário Administrador') {
