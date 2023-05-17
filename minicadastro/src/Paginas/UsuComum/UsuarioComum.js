@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+
 
 
 const UsuarioComum = () => {
    const [uatual, setUatual] = useState({})
    const { state } = useLocation()
+
+
+   const navegar = useNavigate()
+
   
    useEffect(() => {
       setUatual({...state})
+      
    }, [])
   
+   const sair = () => {
+      navegar('/', { replace: true })
+   }
 
    return (
       <div>
@@ -19,7 +28,7 @@ const UsuarioComum = () => {
          <div>Email: {uatual.email}</div>
          <div>Senha: {uatual.senha}</div>
          <div>Pagamento: {uatual.pagamento}</div>
-         <button>Sair</button>
+         <button onClick={sair} >Sair</button>
          <div></div>
          <div></div>
          <div></div>
