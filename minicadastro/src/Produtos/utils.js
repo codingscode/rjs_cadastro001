@@ -35,7 +35,7 @@ export const Utils = ({funcao}) => {
    
 export const ChamadaProdutos = async (f) => {
       await useEffect(() => {
-         fetch(`http://192.168.1.13:3000/produtos`)
+         fetch(`http://192.168.1.17:3000/produtos`)
            .then(response => response.json())
            .then((data) => {
               console.log(data)
@@ -50,7 +50,7 @@ export const ChamadaProdutos = async (f) => {
    
 export const ChamadaPessoas = async (f) => {
       //await useEffect(() => {
-      await fetch(`http://192.168.1.13:3000/usuarios_comuns`)
+      await fetch(`http://192.168.1.17:3000/usuarios_comuns`)
       .then(response => response.json())
       .then((data) => {
          console.log(data)
@@ -66,7 +66,7 @@ export const ChamadaPessoas = async (f) => {
 export const CadastrarPessoa = async (jsonData) => {
    
    // Send data to the backend via POST
-   await fetch('http://192.168.1.13:3000/usuarios_comuns', {  // Enter your IP address here
+   await fetch('http://192.168.1.17:3000/usuarios_comuns', {  // Enter your IP address here
    method: 'POST', 
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
@@ -84,7 +84,7 @@ export const ApagarPessoa = async (lista, nome) => {
    
    console.log('pessoa', pessoa)
    
-   await fetch(`http://192.168.1.13:3000/usuarios_comuns/${pessoa[0].id}`, {
+   await fetch(`http://192.168.1.17:3000/usuarios_comuns/${pessoa[0].id}`, {
       method: 'DELETE', 
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pessoa)
@@ -96,8 +96,13 @@ export const ApagarPessoa = async (lista, nome) => {
 }
 
 export const EAdministrador = async (nome, senha, estado) => {
-   
-   let ret = fetch(`http://192.168.1.13:3000/u_administrador`)
+      
+   return await fetch(`http://192.168.1.17:3000/u_administrador`, {
+         method: 'GET',
+         headers: {
+            Accept: 'application/vnd.github.v3+json'
+         }
+      })
       .then(res => res.json())
       .then((data) => {
          console.log('admin ', data)
@@ -116,28 +121,6 @@ export const EAdministrador = async (nome, senha, estado) => {
          }
       })
    
-   return ret
-   
-   
-   /* let retorno = fetch(`http://192.168.1.13:3000/u_administrador`)
-      .then(res => res.json())
-      .then((data) => {
-         console.log('admin ', data)
          
-         if ((data.nome == nome) && (data.senha = senha)) {
-            console.log('bate')
-            estado(true)
-         }
-         else {
-            console.log('nao bate')
-            estado(false)
-         }
-      })
-      /* .catch((erro) => {
-         console.log(`erro: ${erro}`)
-      }) 
-   
-   return estado */
-      
 }
 

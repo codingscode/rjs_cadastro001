@@ -6,23 +6,20 @@ import './Inicio.css'
 
 
 
-
 const Inicio = ({}) => {
    const [ucomuns, setUcomuns] = useState([])
    const [eadmin, setEadmin] = useState(false)
-
-   useEffect(() => {
-      ChamadaPessoas(setUcomuns)
-      //Verificar()
-   }, [])
-
    
    const navegar = useNavigate()
 
-   const Verificar = (valor = false) => {
-      setEadmin(valor)
-   }
 
+   useEffect(() => {
+      ChamadaPessoas(setUcomuns)
+      
+   }, [])
+
+   
+   
    const Entrar = (e) => {
       e.preventDefault()
 
@@ -35,8 +32,8 @@ const Inicio = ({}) => {
       console.log('EAdministrador', EAdministrador(nome, senha, setEadmin))
       console.log('valor eadmin', eadmin)
       
-      if (tipousario == 'Usuário Administrador') {
-
+      if (tipousario === 'Usuário Administrador') {
+         
          if(eadmin) {
             console.log('é administrador?', eadmin)
             navegar('/administrador', { replace: true })
@@ -45,8 +42,8 @@ const Inicio = ({}) => {
             alert('você não é administrador')
          }
       }
-      if (tipousario == 'Usuário Comum') {
-         let presente = ucomuns.filter((cada) => (nome == cada.nome) & (senha == cada.senha))
+      if (tipousario === 'Usuário Comum') {
+         let presente = ucomuns.filter((cada) => (nome === cada.nome) & (senha === cada.senha))
          console.log('existe?', presente)
 
          if(presente.length) {

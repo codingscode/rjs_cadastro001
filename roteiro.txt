@@ -82,7 +82,7 @@ em u administrador só entra clicando duas vezes ( ??????? )
 
 mesma coisa ainda
 
-
+não seta o boolean de uma vez só seta clicando duas vezes
 
 
 
