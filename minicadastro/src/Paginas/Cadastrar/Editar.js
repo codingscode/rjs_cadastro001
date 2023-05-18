@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { CadastrarPessoa } from '../../Produtos/utils'
 
 
 //{"id": 1, "nome": "kyle", "sobrenome": "silva", "senha": "abc", "email": "kyle@gmail.com", "compras": [], "soma_total": 3600}
 
-const Cadastrar = () => {
+const Editar = () => {
    const [usuarioAtual, setUsuarioAtual] = useState({
       nome: '', sobrenome: '', senha: '', email: ''
    })
 
-   
+   const { state } = useLocation()
+
+   console.log('usuario', state)
 
    const navigate = useNavigate()
 
@@ -18,6 +20,11 @@ const Cadastrar = () => {
       setUsuarioAtual({...usuarioAtual, [nome]: v})
       console.log(usuarioAtual)
    }
+
+   const alterar = (v) => {
+      console.log('v: ', v)
+   }
+
 
    const handleSubmit = (e) => {
       e.preventDefault()
@@ -38,10 +45,10 @@ const Cadastrar = () => {
    return (
       <form onSubmit={handleSubmit} >
          <div>Cadastrar Usuário</div>
-         <input id='nome' name="nome" placeholder='nome' /><br />
-         <input id='sobrenome' name="sobrenome" placeholder='sobrenome'  /><br />
-         <input id='email' name="email" placeholder='email' /><br />
-         <input id='senha' name="senha" placeholder='senha' /><br />
+         <input id='nome' name="nome" placeholder='nome' value={state.nome} onChange={(e) => alterar(e.target)}/><br />
+         <input id='sobrenome' name="sobrenome" placeholder='sobrenome' value={state.sobrenome} /><br />
+         <input id='email' name="email" placeholder='email' value={state.email} /><br />
+         <input id='senha' name="senha" placeholder='senha' value={state.senha} /><br />
          <div>
             selecionar produtos...
          </div>
@@ -58,5 +65,5 @@ const Cadastrar = () => {
  
 }
  
-export default Cadastrar
+export default Editar
  

@@ -10,6 +10,7 @@ import ElementoErro from './erro-pagina'
 import Produtos from './Produtos/Produtos'
 import UsuarioAdministrador from './Paginas/UsuAdministrador/UsuarioAdministrador'
 import UsuarioComum from './Paginas/UsuComum/UsuarioComum'
+import Editar from './Paginas/Cadastrar/Editar'
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
          {
            path: '/ucomum',
            element: <UsuarioComum />,
+         },
+         {
+           path: '/editar',
+           element: <Editar />,
          },
 
        ],

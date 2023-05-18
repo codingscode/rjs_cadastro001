@@ -87,6 +87,13 @@ não seta o boolean de uma vez só seta clicando duas vezes
 saindo da página usuário comum
 
 
+saindo da página usuário administrador
+
+
+modal
+https://medium.com/tinyso/how-to-create-a-modal-component-in-react-from-basic-to-advanced-a3357a2a716a
+https://dev.to/franciscomendes10866/how-to-create-a-modal-in-react-3coc
+https://medium.com/reactbrasil/modal-funcional-com-react-hooks-ddaf6224efa1
 
 
 

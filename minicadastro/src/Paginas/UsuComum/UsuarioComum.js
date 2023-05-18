@@ -20,6 +20,10 @@ const UsuarioComum = () => {
       navegar('/', { replace: true })
    }
 
+   const editar = () => {
+      navegar('/cadastrar', { state: uatual })
+   }
+
    return (
       <div>
          <div>Usuário</div>
@@ -28,6 +32,7 @@ const UsuarioComum = () => {
          <div>Email: {uatual.email}</div>
          <div>Senha: {uatual.senha}</div>
          <div>Pagamento: {uatual.pagamento}</div>
+         <button onClick={editar} >Editar</button>
          <button onClick={sair} >Sair</button>
          <div></div>
          <div></div>
