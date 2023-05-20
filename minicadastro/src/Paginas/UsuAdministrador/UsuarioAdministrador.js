@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { ChamadaPessoas, ApagarPessoa } from '../../Produtos/utils'
 import './UsuarioAdministrador.css'
+import Modal1 from "../../Modal/Modal1"
+
 
 
 const UsuarioAdministrador = () => {
    const [usuarios, setUsuarios] = useState([])
+   const [mostrar, setMostrar] = useState(false)
+
 
    const navegar = useNavigate()
       
@@ -24,6 +28,10 @@ const UsuarioAdministrador = () => {
 
    const sair = () => {
       navegar('/', { replace: true })
+   }
+
+   const modalMostrar = () => {
+      setMostrar(!mostrar)
    }
 
    return (
@@ -46,6 +54,8 @@ const UsuarioAdministrador = () => {
                }) : <div className='aviso' >Não há usuários cadastrados.</div>}
               <button onClick={sair} >Sair</button>
            </div>
+           <Modal1 mostrar={mostrar} fechar={() => setMostrar(false)} />
+           <button onClick={() => modalMostrar()} >mostrar modal</button>
          </div>
       </div>
    )

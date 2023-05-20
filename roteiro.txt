@@ -86,6 +86,7 @@ não seta o boolean de uma vez só seta clicando duas vezes
 
 saindo da página usuário comum
 
+começando página Editar
 
 saindo da página usuário administrador
 
@@ -96,6 +97,7 @@ https://dev.to/franciscomendes10866/how-to-create-a-modal-in-react-3coc
 https://medium.com/reactbrasil/modal-funcional-com-react-hooks-ddaf6224efa1
 
 
+mostrando e fechando modal
 
 
 
