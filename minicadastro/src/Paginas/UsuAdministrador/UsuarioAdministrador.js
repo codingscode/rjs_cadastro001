@@ -54,9 +54,9 @@ const UsuarioAdministrador = () => {
                }) : <div className='aviso' >Não há usuários cadastrados.</div>}
               <button onClick={sair} >Sair</button>
            </div>
-           <Modal1 mostrar={mostrar} fechar={() => setMostrar(false)} />
            <button onClick={() => modalMostrar()} >mostrar modal</button>
          </div>
+         <Modal1 mostrar={mostrar} fechar={() => setMostrar(false)} />
       </div>
    )
  

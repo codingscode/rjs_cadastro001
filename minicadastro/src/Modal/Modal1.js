@@ -10,15 +10,15 @@ const Modal1 = ({ mostrar, fechar }) => {
    }
 
    return (
-      <div className='modal' >
-         <div>
-            <div>
+      <div className='modal' onClick={() => fechar()} >
+         <div className='conteudomodal'  onClick={ (e) => e.stopPropagation() } >
+            <div className='titulo' >
                 <h4>titulo</h4>
             </div>
-            <div>
+            <div className='conteudo' >
                 conteudo
             </div>
-            <div>
+            <div className='botao' >
                 <button onClick={() => fechar()} >fechar</button>
             </div>
             
