@@ -13,10 +13,12 @@ const Modal1 = ({ mostrar, fechar }) => {
       <div className='modal' onClick={() => fechar()} >
          <div className='conteudomodal'  onClick={ (e) => e.stopPropagation() } >
             <div className='titulo' >
-                <h4>titulo</h4>
+                <h4>Ação Necessária</h4>
             </div>
             <div className='conteudo' >
-                conteudo
+                <div>Deseja realmente apagar o usuário xxxx?</div>
+                <div>sim</div>
+                <div>não</div>
             </div>
             <div className='botao' >
                 <button onClick={() => fechar()} >fechar</button>
